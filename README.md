@@ -75,45 +75,7 @@ The platform is built on a modular, scalable architecture consisting of six laye
 
 ---
 
-## Project Deliverables
 
-| Deliverable | Description |
-|---|---|
-| Stakeholder Analysis | Key stakeholders, goals, influence mapping, and pain points |
-| User Stories | Agile user stories with acceptance criteria |
-| Product Requirement Document (PRD) | Complete product specification and requirements |
-| Feature Prioritization | MoSCoW prioritization framework |
-| Wireframes | Low-fidelity designs for all major screens |
-| System Architecture | Technical architecture and service design |
-| User Flow Diagrams | End-to-end workflow mapping |
-| Product Roadmap | Multi-phase development strategy |
-| Presentation Deck | Evaluation-ready presentation outline |
-
----
-
-## Repository Structure
-
-```
-AIPMP/
-│
-├── docs/
-│   ├── 01_stakeholder_analysis.md
-│   ├── 02_user_stories.md
-│   ├── 03_prd.md
-│   ├── 04_feature_prioritization.md
-│   ├── 05_wireframes.md
-│   ├── 06_system_architecture.md
-│   ├── 07_user_flows.md
-│   ├── 08_product_roadmap.md
-│   └── 09_presentation_deck.md
-│
-├── assets/
-│   └── screenshots/
-│
-└── README.md
-```
-
----
 
 ## Screenshots
 
