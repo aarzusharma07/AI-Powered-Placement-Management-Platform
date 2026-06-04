@@ -58,7 +58,7 @@ End-to-end job posting management, application tracking, recruitment workflow au
 | Database | MongoDB |
 | Authentication | JWT |
 | AI Components | NLP Resume Parser, Recommendation Engine, Interview Question Generator |
-| Documentation | Markdown, Mermaid.js |
+
 
 ---
 
@@ -130,6 +130,8 @@ AIPMP/
 
 ### ai capilot 
 <img width="591" height="798" alt="image" src="https://github.com/user-attachments/assets/896d6407-06b5-444e-9a9e-7d12edcfc73a" />
+### ai interview prep portal
+<img width="1875" height="977" alt="image" src="https://github.com/user-attachments/assets/adb47c1f-9ef7-40d5-9924-78b8330dac56" />
 
 
 ---
