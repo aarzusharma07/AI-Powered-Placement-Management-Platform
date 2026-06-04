@@ -4,33 +4,33 @@ import { AppContext } from '../context/AppContext'
 const Sidebar = ({ activeView, setActiveView }) => {
   const { currentRole } = useContext(AppContext)
 
-  // Configure navigation links based on user role
+  // Configure navigation links based on user role (no icons or emojis)
   const getNavItems = () => {
     switch (currentRole) {
       case 'student':
         return [
-          { id: 'home', label: 'Dashboard', icon: '📊' },
-          { id: 'jobs', label: 'Matching Jobs', icon: '💼' },
-          { id: 'resume', label: 'Resume Parser', icon: '📄' },
-          { id: 'prep', label: 'Prep Portal', icon: '🧠' }
+          { id: 'home', label: 'Dashboard' },
+          { id: 'jobs', label: 'Matching Jobs' },
+          { id: 'resume', label: 'Resume Parser' },
+          { id: 'prep', label: 'Prep Portal' }
         ]
       case 'recruiter':
         return [
-          { id: 'dashboard', label: 'Hiring Overview', icon: '📊' },
-          { id: 'jobs', label: 'Job Postings', icon: '✏️' },
-          { id: 'candidates', label: 'Pipeline Board', icon: '👥' }
+          { id: 'dashboard', label: 'Hiring Overview' },
+          { id: 'jobs', label: 'Job Postings' },
+          { id: 'candidates', label: 'Pipeline Board' }
         ]
       case 'officer':
         return [
-          { id: 'dashboard', label: 'Funnel Stats', icon: '📈' },
-          { id: 'verifications', label: 'GPA Audits', icon: '🛡️' },
-          { id: 'drives', label: 'Drive Manager', icon: '🏢' },
-          { id: 'announcements', label: 'Broadcasts', icon: '📢' }
+          { id: 'dashboard', label: 'Funnel Stats' },
+          { id: 'verifications', label: 'GPA Audits' },
+          { id: 'drives', label: 'Drive Manager' },
+          { id: 'announcements', label: 'Broadcasts' }
         ]
       case 'admin':
         return [
-          { id: 'users', label: 'User Roles', icon: '👥' },
-          { id: 'health', label: 'System Health', icon: '⚡' }
+          { id: 'users', label: 'User Roles' },
+          { id: 'health', label: 'System Health' }
         ]
       default:
         return []
@@ -41,30 +41,47 @@ const Sidebar = ({ activeView, setActiveView }) => {
 
   return (
     <div className="sidebar">
-      <div className="brand">
-        <span className="brand-logo">🤖</span>
-        <span className="brand-text">AIPMP SaaS</span>
+      <div className="brand" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '0.25rem' }}>
+        <span className="brand-text" style={{ fontSize: '1.1rem', letterSpacing: '0.05em' }}>AIPMP PORTAL</span>
+        <span style={{ fontSize: '0.65rem', color: 'var(--primary)', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Product Simulation</span>
       </div>
       
-      <ul className="nav-list">
+      <ul className="nav-list" style={{ marginTop: '1rem' }}>
+        <li style={{ fontSize: '0.7rem', fontWeight: '700', textTransform: 'uppercase', color: 'var(--text-muted)', letterSpacing: '0.05em', padding: '0 1rem 0.25rem 1rem' }}>
+          Portal Navigation
+        </li>
         {items.map(item => (
           <li
             key={item.id}
             className={`nav-item ${activeView === item.id ? 'active' : ''}`}
             onClick={() => setActiveView(item.id)}
+            style={{ paddingLeft: '1rem' }}
           >
-            <span>{item.icon}</span>
             <span>{item.label}</span>
           </li>
         ))}
+
+        <li style={{ borderTop: '1px solid var(--border)', margin: '1rem 0' }}></li>
+
+        <li style={{ fontSize: '0.7rem', fontWeight: '700', textTransform: 'uppercase', color: 'var(--text-muted)', letterSpacing: '0.05em', padding: '0 1rem 0.25rem 1rem' }}>
+          Simulation Assets
+        </li>
+        <li
+          className={`nav-item ${activeView === 'deliverables' ? 'active' : ''}`}
+          onClick={() => setActiveView('deliverables')}
+          style={{ paddingLeft: '1rem' }}
+        >
+          <span>Deliverables Hub</span>
+        </li>
       </ul>
       
       <div className="sidebar-footer">
-        <p>AIPMP System v1.0.0</p>
-        <p>© 2026 Dev Sim</p>
+        <p style={{ letterSpacing: '0.03em' }}>AIPMP Core v2.0.0</p>
+        <p>Evaluation Sandbox</p>
       </div>
     </div>
   )
 }
 
 export default Sidebar
+

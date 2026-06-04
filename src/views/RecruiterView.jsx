@@ -62,7 +62,7 @@ const RecruiterView = ({ activeView, setActiveView }) => {
   // Filter applications by selected job
   const jobApps = applications.filter(app => app.jobId === selectedJobId)
 
-  // Pipeline column arrays
+  // Pipeline column arrays (no icons)
   const columns = [
     { id: 'screening', title: 'Resume Screen', color: 'var(--text-muted)' },
     { id: 'test', title: 'Technical Assessment', color: 'var(--warning)' },
@@ -84,25 +84,25 @@ const RecruiterView = ({ activeView, setActiveView }) => {
             title="Open Postings" 
             value={jobs.length} 
             footerText="Active listings in placement pool" 
-            icon="💼"
+            icon=""
           />
           <DashboardCard 
             title="Total Applications" 
             value={applications.length} 
             footerText="Resume screenings matching criteria" 
-            icon="📁"
+            icon=""
           />
           <DashboardCard 
             title="Scheduled Interviews" 
             value={applications.filter(a => a.stage === 'interview').length} 
             footerText="Slots coordinated automatically" 
-            icon="📅"
+            icon=""
           />
           <DashboardCard 
             title="Offers Extended" 
             value={applications.filter(a => a.stage === 'offered').length} 
             footerText="Offered conversion yield: 85%" 
-            icon="🎉"
+            icon=""
           />
         </DashboardCardGrid>
 
